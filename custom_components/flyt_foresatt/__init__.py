@@ -2,23 +2,14 @@
 
 from __future__ import annotations
 
-import aiohttp
-
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
 
-from .api import FlytClient
+from .client import create_client
 from .const import CONF_COOKIES
 from .coordinator import FlytConfigEntry, FlytCoordinator
 
 PLATFORMS: list[Platform] = [Platform.CALENDAR, Platform.SENSOR]
-
-
-def create_client(hass: HomeAssistant, cookies: dict[str, str]) -> FlytClient:
-    """Create an API client with its own (cookie-less) HTTP session."""
-    session = async_create_clientsession(hass, cookie_jar=aiohttp.DummyCookieJar())
-    return FlytClient(session, cookies)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: FlytConfigEntry) -> bool:

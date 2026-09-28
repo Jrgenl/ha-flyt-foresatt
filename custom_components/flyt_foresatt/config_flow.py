@@ -15,7 +15,7 @@ from homeassistant.helpers.selector import (
     TextSelectorType,
 )
 
-from . import create_client
+from .client import create_client
 from .api import FlytAuthError, FlytError, parse_cookie_header
 from .const import CONF_COOKIES, CONF_MUNICIPALITY, DOMAIN, FRONTEND_URL
 

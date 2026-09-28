@@ -19,7 +19,7 @@ from .const import CONF_COOKIES, DEFAULT_SCAN_INTERVAL, DOMAIN, TIMETABLE_WEEKS
 
 _LOGGER = logging.getLogger(__name__)
 
-type FlytConfigEntry = ConfigEntry[FlytCoordinator]
+FlytConfigEntry = ConfigEntry["FlytCoordinator"]
 
 
 @dataclass(slots=True)
