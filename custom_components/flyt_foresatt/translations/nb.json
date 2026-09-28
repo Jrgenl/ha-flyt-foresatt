@@ -1,0 +1,72 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Flyt Foresatt",
+        "description": "1. Logg inn på {portal} i nettleseren (ID-porten/BankID).\n2. Åpne utviklerverktøy (F12) → Network, last siden på nytt og klikk på en forespørsel til api.foresatt.visma.no.\n3. Kopier hele verdien av «Cookie» under Request Headers og lim den inn her.",
+        "data": {
+          "municipality": "Kommune (fra adressen, f.eks. «hamar»)",
+          "cookies": "Cookie-header"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Økten er utløpt",
+        "description": "Logg inn på {portal} på nytt og lim inn en fersk «Cookie»-header fra en forespørsel til api.foresatt.visma.no.",
+        "data": {
+          "cookies": "Cookie-header"
+        }
+      }
+    },
+    "error": {
+      "invalid_cookie": "Fant ingen cookies i teksten.",
+      "invalid_auth": "Flyt godtok ikke økten. Logg inn på nytt og kopier cookien igjen.",
+      "cannot_connect": "Kunne ikke koble til Flyt Foresatt."
+    },
+    "abort": {
+      "already_configured": "Denne kontoen er allerede satt opp.",
+      "reauth_successful": "Ny økt lagret."
+    }
+  },
+  "entity": {
+    "calendar": {
+      "timetable": {
+        "name": "Timeplan"
+      }
+    },
+    "sensor": {
+      "unread_messages": {
+        "name": "Uleste meldinger"
+      },
+      "unread_notifications": {
+        "name": "Uleste kunngjøringer"
+      },
+      "next_lesson": {
+        "name": "Neste time"
+      },
+      "school_start_today": {
+        "name": "Skolestart i dag"
+      },
+      "school_end_today": {
+        "name": "Skoleslutt i dag"
+      },
+      "next_school_day_start": {
+        "name": "Neste skoledag starter"
+      },
+      "absences": {
+        "name": "Fravær dette skoleåret"
+      },
+      "sfo_today": {
+        "name": "SFO i dag",
+        "state": {
+          "til_stede": "Til stede",
+          "sjekket_ut": "Sjekket ut",
+          "ikke_registrert": "Ikke registrert",
+          "ingen_sfo_i_dag": "Ingen SFO i dag"
+        }
+      },
+      "unanswered_forms": {
+        "name": "Ubesvarte skjema"
+      }
+    }
+  }
+}

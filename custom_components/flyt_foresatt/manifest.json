@@ -1,0 +1,12 @@
+{
+  "domain": "flyt_foresatt",
+  "name": "Flyt Foresatt",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/jrgenl/ha-flyt-foresatt",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/jrgenl/ha-flyt-foresatt/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

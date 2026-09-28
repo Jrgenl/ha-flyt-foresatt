@@ -1,0 +1,72 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Flyt Foresatt",
+        "description": "1. Log in to {portal} in your browser (ID-porten/BankID).\n2. Open developer tools (F12) → Network, reload and click a request to api.foresatt.visma.no.\n3. Copy the full value of the \"Cookie\" request header and paste it here.",
+        "data": {
+          "municipality": "Municipality (from the URL, e.g. \"hamar\")",
+          "cookies": "Cookie header"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Session expired",
+        "description": "Log in to {portal} again and paste a fresh \"Cookie\" header from a request to api.foresatt.visma.no.",
+        "data": {
+          "cookies": "Cookie header"
+        }
+      }
+    },
+    "error": {
+      "invalid_cookie": "No cookies found in the text.",
+      "invalid_auth": "Flyt rejected the session. Log in again and copy the cookie again.",
+      "cannot_connect": "Could not connect to Flyt Foresatt."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Session updated."
+    }
+  },
+  "entity": {
+    "calendar": {
+      "timetable": {
+        "name": "Timetable"
+      }
+    },
+    "sensor": {
+      "unread_messages": {
+        "name": "Unread messages"
+      },
+      "unread_notifications": {
+        "name": "Unread announcements"
+      },
+      "next_lesson": {
+        "name": "Next lesson"
+      },
+      "school_start_today": {
+        "name": "School starts today"
+      },
+      "school_end_today": {
+        "name": "School ends today"
+      },
+      "next_school_day_start": {
+        "name": "Next school day starts"
+      },
+      "absences": {
+        "name": "Absences this school year"
+      },
+      "sfo_today": {
+        "name": "After-school today",
+        "state": {
+          "til_stede": "Present",
+          "sjekket_ut": "Checked out",
+          "ikke_registrert": "Not registered",
+          "ingen_sfo_i_dag": "No SFO today"
+        }
+      },
+      "unanswered_forms": {
+        "name": "Unanswered forms"
+      }
+    }
+  }
+}
