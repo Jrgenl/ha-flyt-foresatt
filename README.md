@@ -1,5 +1,8 @@
 # Flyt Foresatt for Home Assistant
 
+[![Åpne i HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Jrgenl&repository=ha-flyt-foresatt&category=integration)
+[![Legg til integrasjon](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=flyt_foresatt)
+
 Uoffisiell Home Assistant-integrasjon for **Flyt Foresatt** (Visma Flyt Skole), altså appen og foresattportalen `foresatt.visma.no`. Den henter timeplan, meldinger, kunngjøringer, fravær og SFO-status for barna dine. Dataene kan brukes i dashbord og automasjoner.
 
 > ⚠️ Integrasjonen bruker det samme interne API-et som foresattportalen (`api.foresatt.visma.no`). API-et er ikke dokumentert av Visma og kan endres uten varsel. Integrasjonen er ikke laget eller støttet av Visma.
@@ -25,9 +28,17 @@ Barnehage støttes ikke ennå, fordi Flyt Foresatt for barnehage lanseres først
 
 ## Installasjon
 
-**Via HACS (egendefinert repository):**
-1. HACS → ⋮ → *Custom repositories* → legg til URL-en til dette repoet, type *Integration*.
-2. Installer «Flyt Foresatt» og start Home Assistant på nytt.
+**Via HACS (anbefalt):**
+
+[![Åpne i HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Jrgenl&repository=ha-flyt-foresatt&category=integration)
+
+1. Trykk på knappen over. Første gang blir du bedt om å oppgi adressen til Home Assistant-installasjonen din.
+2. Trykk **Last ned** i HACS og start Home Assistant på nytt.
+3. Trykk på knappen under for å legge til integrasjonen:
+
+   [![Legg til integrasjon](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=flyt_foresatt)
+
+Knappen virker ikke? Legg til repoet manuelt: HACS → ⋮ → *Custom repositories* → `https://github.com/Jrgenl/ha-flyt-foresatt`, type *Integration*.
 
 **Manuelt:** Kopier `custom_components/flyt_foresatt` til `config/custom_components/` og start på nytt.
 
